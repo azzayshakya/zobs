@@ -1,0 +1,248 @@
+.card-container {
+    overflow-y: auto;
+    max-height: 600px; 
+    
+    padding-right: 20px; 
+    /* border: 2px blue solid; */
+    
+
+}
+.card-container {
+
+
+    scrollbar-width:20px;
+    scrollbar-color: black  rgba( 255, 255, 255, 0.25 ); 
+}
+.card-container::-webkit-scrollbar-thumb{
+    background-color: blue; 
+    border-radius: 10px;
+}
+.card-container::-webkit-scrollbar-thumb {
+    background: #888; 
+    border-radius: 52px;
+    /* border: 2px red solid; */
+}
+
+
+
+.card{
+    margin-top: 20px;
+    height: 200px;
+    /* border: 1px red solid; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border-radius: 52px;
+background: rgba( 255, 255, 255, 0.25 );
+backdrop-filter:blur(10px) ;
+
+/* border: 2px blue solid; */
+}
+
+.CardImg{
+    /* border: 2px blue solid; */
+    /* height: 100%; */
+    width: 100px;
+    height: 100px;
+    margin-top: 10px;
+
+
+}
+.CardImg img{
+    /* border: 2px green solid; */
+    margin-top: 20px;
+    margin-left: 10px;
+    
+}
+.card .rightPartOfCard {
+    /* border: 2px yellow solid;     */
+}
+.card .rightPartOfCard h4{
+    position: relative;
+    top: -110px;
+    left: 110px;
+    font-weight:400;
+    /* color: rgb(88, 87, 87); */
+
+}
+.card .rightPartOfCard h3{
+    position: relative;
+    top: -125px;
+    left: 110px;
+    color: black;
+}
+.MidRowOfTheCard{
+    display: flex;
+    position: relative;
+    top: -130px;
+    left: 100px;
+    font-size: 15px;
+    color: rgb(88, 87, 87);
+    /* color: white; */
+    
+
+    /* border: 2px yellow solid; */
+}
+
+.MidRowOfTheCard span {
+    /* border: 2px red solid; */
+    padding: 0px 6px;    
+
+}
+.rightPartOfCard p{
+    position: relative;
+    top: -140px;
+    left: 110px;
+    /* border: 2px red solid; */
+    width: 360px;
+    font-size: 14px;
+    /* font-weight: 500; */
+    color: rgb(88, 87, 87);
+    color: black;
+
+
+}
+.ppp{
+    text-decoration: none;
+}  
+
+.applybutton  button{
+   
+
+    border: none;
+    border-radius: 52px;
+/* background: rgba( 255, 255, 255, 0.25 ); */
+background-color: white;
+backdrop-filter:blur(10px) ;
+height: 50px;
+width: 100px;
+z-index: 100;
+
+cursor: pointer;
+position: relative;
+left: 500px;
+top: -200px;
+
+}
+
+ 
+.applyForm{
+    padding: 0px 20px;
+    border: 2px  black solid;
+    position:  relative;
+    /* top: -150px; */
+    left:20px;
+    background-color: black;
+    width: 620px;
+    height:600px;
+    /* padding-bottom: -10px; */
+    background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set the background image */
+    background-size: cover; 
+    background-position: center; 
+    border-radius: 52px;
+
+
+
+}
+.applyforminner{
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter:blur(10px) ;
+    border-radius: 52px;
+    padding: 20px;
+    margin-top: 15px;
+}
+.row{
+    /* border: 2px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+}
+.row label{
+    /* position: relative; */
+    /* top: -10px; */
+    color: black;
+
+}
+.row input{
+   /* padding:10px 50px; */
+   padding: 8px 10px;
+   width: 90%;
+   
+}
+.leftelementincardform{
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+    
+}
+.rightelementincardform{
+    /* border: 2px blue solid; */
+    display: flex;
+    flex-direction: column;
+    width: 275px;
+}
+.skiilsinform{
+    /* border: 2px blue solid; */
+
+    display: flex;
+    flex-direction: column;
+
+}
+.skiilsinform textarea{
+    padding: 5px 5px;
+    font-weight: 500;
+    
+}
+.rowexp{
+    height: 200px;
+
+}
+.radioincardform{
+    /* border: 2px red solid; */
+    /* height:100px; */
+      /* display: grid;
+  grid-template-columns: 1em auto;
+  gap: 0.5em; */
+    
+
+}
+/* .applyformradio p{
+    color: black;
+} */
+.radioincardform p{
+    /* border: green 2px solid; */
+    color: black;
+    /* margin-top: 0px; */
+}
+
+.radioincardform input{
+    position: relative;
+    left: 50px;
+    top: 23px;
+    cursor: pointer;
+  
+}
+.radioincardform label{
+    position: relative;
+    top: -20px;
+   
+    
+}
+.submitformdatabutton  button{
+    border: none;
+    border-radius: 52px;
+/* background: rgba( 255, 255, 255, 0.25 ); */
+background-color: white;
+backdrop-filter:blur(10px) ;
+height: 50px;
+width: 100px;
+
+
+cursor: pointer;
+position: relative;
+left: 220px;
+/* top: -200px; */
+
+}

@@ -1,0 +1,98 @@
+.upperFormContainer{
+    margin-top: 50px;
+    background-color: rgb(247, 246, 246);
+    padding: 25px 0px;
+    height:600px;
+    /* border: 2px red solid; */
+    display: flex;
+
+}
+.leftSide{
+    
+    /* border: 2px red solid; */
+    width:50%;
+
+}
+.leftSide .leftsideIcon{
+    /* border: 2px red solid; */
+    height: 250px;
+    font-size: 200px;
+    padding-left: 220px;
+    margin-top: 100px;
+}
+.leftSide .leftSideLogo{
+    /* border: 2px red solid; */
+    text-align: center;
+    font-size: 40px;
+    font-weight: 1000;
+    position: relative;
+    top: -60px;
+    left:0px; 
+}
+.leftSide .leftsideTag{
+    /* border: 2px red solid; */
+    text-align: center;
+    font-size: 30px;
+}
+.rightside{
+    /* border: 2px red solid; */
+    width:50%;
+}
+
+.FormMainContainer{
+    /* border: 2px red solid; */
+    width: 300px;
+    height: 300px;
+    position: relative;
+    left: 20%;
+    top: 100px;
+    padding: 20px 20px;
+    border: 1px solid;
+    border-radius:10px;
+    background-color: white;
+    
+}
+
+.FormMainContainer  h2 {
+    text-align: center;
+}
+.FormMainContainer input{
+    padding: 5px 10px;
+    width: 85%;
+    margin: 10px 0px;
+    /* margin-left: 40px; */
+    position: relative;
+    top: -28px;
+    left: 35px;
+
+   /* border: 2px red solid; */
+
+}
+
+.FormMainContainer .asdf{
+    /* border: 2px red solid; */
+    /* width: ; */
+    height: 50px;
+
+}
+.FormMainContainer .formIcon{
+   /* border: 2px red solid; */
+   position: relative;
+   top: 12px;
+   left: 0px;
+   height: 28px;
+   width: 30px;  
+}
+.FormMainContainer .FormButton{
+    margin-left: 90px;
+}
+.FormMainContainer button{
+    padding: 9px 10px;
+    border-radius: 5px;
+    width: 50%;
+    margin: 15px 0px;
+    text-align: center;
+    background-color: #3575E2;
+    color: white;
+    border: none;
+}

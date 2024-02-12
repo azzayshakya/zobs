@@ -1,0 +1,33 @@
+.applicantpagemain{
+    background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; 
+    height: 710px; 
+    width: 100%;
+    overflow-y: auto;
+
+}
+
+.mainc{
+    margin-top: 50px;
+    /* border: 2px red solid; */
+    border-radius: 52px;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter:blur(10px) ;
+    width: 70%;
+    margin-left: 200px;
+    padding: 20px 20px;
+
+
+}
+.maintop{
+    /* border: 2px blue solid; */
+
+
+}
+.mainbottom{
+    border: 2px  rgba( 255, 255, 255, 0.25 ) solid;
+    margin-bottom: 10px ;
+
+
+}

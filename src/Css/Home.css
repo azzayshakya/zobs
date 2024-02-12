@@ -1,0 +1,28 @@
+.homeMain{
+    background: url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-position:center ;
+    background-size: cover;
+    height: 711px;
+    overflow-y: auto;
+}
+.mainContainerHome{
+    /* border: 2px green solid; */
+
+ 
+  
+    width: 100%;
+    margin-top: 190px;
+    margin-bottom: 50px;
+    
+}
+
+.midContainer{
+    /* border: 2px red solid; */
+
+    min-height: 100px;
+    width: 700px;
+    margin-left: 330px;
+    /* margin-top: 10px; */
+
+}
+

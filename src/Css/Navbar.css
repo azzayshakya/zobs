@@ -1,0 +1,212 @@
+*{
+    box-sizing: border-box;
+}
+
+/* 
+background-color: #2196f3; 
+color: #3575E2; 
+*/
+
+.Header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 52px;
+background: rgba( 255, 255, 255, 0.25 );
+backdrop-filter:blur(10px) ;
+/* border: 2px red solid; */
+position: relative;
+top: 20px;
+
+}
+.a{
+    /* border:  2px red solid; */
+}
+
+.logoSide{
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-weight: 500;
+    /* border: 2px red solid; */
+
+}
+.companyIcon{
+    /* border: 1px green solid; */
+    margin-top: 7px;
+
+
+
+}
+.companyName{
+    /* border: 1px blue solid; */
+
+
+}
+.logoSide .zx{
+    padding: 0px 10px; 
+}
+
+.navbarMid ul{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.navbarMid ul li{
+    list-style-type: none;
+    padding: 0px 30px;
+    font-weight: 500;
+}
+.navbarMid ul li:hover{
+    color: #3575E2;
+    cursor: pointer;
+
+}
+.active{
+    color: #3575E2;
+    font-weight: 500;
+  }
+
+.buttonside{
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    /* border: 2px red solid; */
+}
+
+.buttonside button{
+    margin: 0px 10px;
+    background-color: #3575E2;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    /* border: 2px red solid; */
+}
+.loginButton button Link{
+    /* border: 2px red solid; */
+}
+
+.toggleButton {
+    display: none; 
+}
+
+.headerMobile{
+    display: none; 
+
+}
+.LinkTag{
+    text-decoration: none;
+    color: white;
+    /* border: 2px red solid; */
+}
+
+.LinkTAG{
+    /* border: 2px red solid; */
+    text-decoration: none;
+    color: black;
+}
+.LinkTAGHome{
+    color: #3575E2;
+}
+
+
+
+
+@media (max-width: 768px) {
+    .navbarMid {
+      display: none; 
+    }
+  
+    .toggleButton {
+      display: block; 
+    }
+    .buttonside {
+      display: none;
+    }
+
+    .Header{
+        
+    }
+
+
+    .headerMobile{
+       
+        position: relative;
+        top: 30px;
+        left: 0px;
+        margin-top: -32px;
+        width: 250px;
+        display: block;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* padding: 40px 0px; */
+        /* background-color: black; */
+        /* color: white; */
+    }
+
+    .navbarMidMobile ul{
+        list-style-type: none;
+        font-weight: 500;
+        cursor: pointer;
+    }
+    
+    .navbarMidMobile ul li:hover {
+        color: #3575E2;
+
+    }
+
+    .logoSide{
+        font-size: 30px;
+    }
+
+    .headerMobile ul{
+        font-size: 25px;
+    }
+    .buttonsideMobile{
+    font-weight: 500;
+    
+    }
+
+    
+
+    .buttonsideMobile button {
+        /* margin: 0px 10px; */
+        background-color: #3575E2;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 8px;
+        
+    
+
+        
+    }
+    .buttonsideMobile button{
+        /* text-decoration: none; */
+    }
+
+    .loginButtonMobile button{
+        padding: 7px 45px;
+        font-size: 15px;
+        text-decoration: none;
+
+    }
+    .logoutButtonMobile button{
+        padding: 7px 39px;
+        font-size: 15px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    .LinkTag{
+        text-decoration: none;
+        color: white;
+        /* border: 2px red solid; */
+    }
+
+
+
+  }

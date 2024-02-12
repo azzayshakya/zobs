@@ -1,0 +1,125 @@
+.postjobpagemain{
+    background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; 
+    height: 710px; 
+    width: 100%;
+    overflow-y: auto;
+}
+.upperPostJob{
+    margin-top: 50px;
+    /* background-color: rgb(247, 246, 246); */
+    /* border: 2px red solid; */
+    padding: 25px 0px;
+}
+.PostJobMain{
+    /* border: 2px red solid; */
+    height: 900px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    /* background-color: white; */
+    font-weight: 500;
+    border-radius: 52px;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter:blur(10px) ;
+}
+
+.PostRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+}
+
+.PostRow div{
+    /* border: 1px rgb(189, 189, 189) solid; */
+
+    /* border: 2px red solid; */
+    width: 100%;
+    padding-left: 20px;
+   
+}
+
+.PostRow  input {
+    padding: 5px 10px;
+    width: 80%;
+    background: rgb(212, 210, 210);
+    
+     font-weight: 500;
+    font-weight:bold;
+    /* border: none;
+    color: white; */
+
+}
+
+.descriptionPostJov{
+    padding-left: 20px;
+
+    
+   
+    
+}
+.descriptionPostJov textarea{
+    background: rgb(212, 210, 210);
+    
+    font-weight: 500;
+   font-weight:bold;
+   
+}
+
+
+/* radio part css babes */
+.PostRowRadioUpper{
+    /* border: 2px red solid; */
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-bottom: 20px;
+
+
+}
+.PostRowRadioUpper div{
+    width: 100%;
+    padding-left: 20px;
+
+}
+.jobLocationRow input{
+    padding: 5px 10px;
+    width: 80%;
+    background: rgb(212, 210, 210);
+    
+    font-weight: 500;
+   font-weight:bold;
+
+}
+/* 
+
+.PostRowRadio input{
+    
+}
+.PostRowRadio label{
+    
+} 
+*/
+
+/* the end */
+
+.SubmitButton{
+    /* border: 2px red solid; */
+    height: 40px;
+    width: 100px;
+    position: relative;
+    top:20px;
+    left: 41%;
+
+
+}
+.SubmitButton button{
+    padding: 10px 40px;
+    border-radius: 2px;
+    background-color: #3575E2;
+    color: white;
+    border: none;
+    
+}

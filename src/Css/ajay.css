@@ -1,0 +1,40 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.pab{
+    border: 2px red solid;
+    background-image: url('https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); /* Set the background image */
+    background-size: cover; /* Cover the entire background */
+    background-position: center; /* Center the background image */
+    height: 710px; /* Set height to fill the viewport */
+   
+    width: 100%;
+    overflow-y: auto;
+    
+}
+
+.ajayts{
+    border: 2px green solid;
+    position: relative; 
+    top: 50%; 
+    left: 50%; 
+   transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    width: 400px;
+    height: 500px;
+}
+.ajaytsa{
+    border: 2px green solid;
+    position: relative; 
+    top:700px; 
+    left: 50%; 
+   transform: translate(-50%, -50%); 
+    text-align: center;
+    color: white;
+    width: 400px;
+    height: 500px;
+}
