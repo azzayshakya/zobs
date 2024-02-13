@@ -60,9 +60,9 @@ const Navbar=()=>{
              <div className="navbarMid a">
             <ul>
                 <li className="navbarNames active"><Link className='LinkTAG LinkTAGHome active' to={"/"}>Home</Link></li>
-                <li className="navbarNames"><Link className='LinkTAG' to={""}>Azzay</Link></li>
+                {/* <li className="navbarNames"><Link className='LinkTAG' to={""}>Azzay</Link></li>
                 <li className="navbarNames">Azzay</li>
-                <li className="navbarNames"><Link className='LinkTAG' to={""}>Azzay</Link></li>
+                <li className="navbarNames"><Link className='LinkTAG' to={""}>Azzay</Link></li> */}
             </ul>
         </div>
         

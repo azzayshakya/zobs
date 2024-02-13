@@ -10,47 +10,47 @@ const PostJobSchema= new Schema({
     ,
     companyName:{
         type: String,
-        // required: true,
+        required: true,
     },
     jobTitle:{
         type:String,
-        // required:true
+        required:true
     },
     minPrice:{
         type:Number,
-        // required:true
+        required:true
     },
     maxPrice:{
         type:Number,
-        // required:true
+        required:true
     },
     salaryType:{
         type:String,
-        // required:true
+        required:true
     },
     jobLocation:{
         type:String,
-        // required:true
+        required:true
     },
     postingDate:{
         type:String,
-        // required:true
+        required:true
     },
     experienceLevel:{
         type:String,
-        // required:true
+        required:true
     },
     employmentType:{
         type:String,
-        // required:true
+        required:true
     },
     companyLogo:{
         type:String,
-        // required:true
+        required:true
     },
     description:{
         type:String,
-        // required:true
+        required:true
     }
 })
 module.exports = mongoose.model("allJobs" ,PostJobSchema )
