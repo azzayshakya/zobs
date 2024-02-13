@@ -10,7 +10,7 @@ const PostJob = () => {
         
         event.preventDefault();
         console.log(JSON.stringify(credentials))       
-        const response=await fetch("http://localhost:5000/PostJob",{
+        const response=await fetch("https://zobs-major-project.onrender.com/PostJob",{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

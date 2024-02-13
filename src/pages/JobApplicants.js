@@ -10,7 +10,7 @@ const JobApplicants = () => {
     const fetchData = async () => {
         try {
             setLoading(true);
-            const fetchedData = await fetch("http://localhost:5000/applicants", {
+            const fetchedData = await fetch("https://zobs-major-project.onrender.com/applicants", {
                 method: "POST",
                 headers: {
                     'Content-Type': 'application/json'

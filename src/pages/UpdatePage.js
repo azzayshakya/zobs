@@ -40,7 +40,7 @@ import Navbar from "../component/Navbar";
         const handleSubmit = async (e) => {
             e.preventDefault();
             try {
-                const response = await fetch("http://localhost:5000/updateJob", {
+                const response = await fetch("https://zobs-major-project.onrender.com/updateJob", {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json'

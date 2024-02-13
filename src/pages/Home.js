@@ -24,7 +24,7 @@ const Home =()=>{
     const fetchjobdata=async()=>{
         try{
 
-            const alljobs= await fetch("http://localhost:5000/alljobs",{
+            const alljobs= await fetch("https://zobs-major-project.onrender.com/alljobs",{
                 method:"POST",
                 headers:{
                     'Content-Type':'application/json'

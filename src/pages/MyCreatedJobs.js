@@ -19,7 +19,7 @@ const MyCreatedJobs = () => {
             
 
 
-            const response = await fetch("http://localhost:5000/MyCreatedJobs", {
+            const response = await fetch("https://zobs-major-project.onrender.com/MyCreatedJobs", {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

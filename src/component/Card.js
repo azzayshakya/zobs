@@ -30,7 +30,7 @@ const Card = ({ data }) => {
         // formDataToSend.append('myfile',credentials.file)
 
         try{
-            const apply= await fetch("http://localhost:5000/applyforjob",{
+            const apply= await fetch("https://zobs-major-project.onrender.com/applyforjob",{
             method:"POST",  
             headers:{
                 'Content-Type': 'application/json'

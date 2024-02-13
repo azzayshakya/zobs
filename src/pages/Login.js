@@ -14,7 +14,7 @@ const Login=()=>{
     console.log(JSON.stringify({email:credentials.email,password:credentials.password}))
 
         event.preventDefault();
-        const response=await fetch("http://localhost:5000/LogIn",{        
+        const response=await fetch("https://zobs-major-project.onrender.com/LogIn",{        
             method:"POST",
             headers:{
                 'Content-Type':'application/json'     

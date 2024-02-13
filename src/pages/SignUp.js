@@ -15,7 +15,7 @@ const SignUp=()=>{
 
     const handleSubmit=async(event)=>{
         event.preventDefault();
-        const response= await fetch("http://localhost:5000/SignUp",{
+        const response= await fetch("https://zobs-major-project.onrender.com/SignUp",{
             method:"POST",
             headers:{
                 'Content-Type':'application/json'
