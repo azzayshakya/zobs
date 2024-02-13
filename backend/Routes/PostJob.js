@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const allJobs =require("../model/PostJob")
 const UserJob= require("../model/UserJob")
+
 router.post('/PostJob', async (req, res) => {
   try {
     const {

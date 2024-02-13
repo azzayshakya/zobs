@@ -12,7 +12,7 @@ import JobApplicants from './pages/JobApplicants'
 
 function App() {
   return (
-   
+
       <Router>
         <Routes>
           <Route exact path='/' element={<Home/>}/>
@@ -22,11 +22,7 @@ function App() {
           <Route exact path='MyCreatedJobs' element={<MyCreatedJobs/>}/>
           <Route exact path='UpdatePage' element={<UpdatePage/>}/>
           <Route exact path='JobApplicants' element={<JobApplicants/>}/>
-
-
-
-
-
+          
         </Routes>
       </Router>
   );
