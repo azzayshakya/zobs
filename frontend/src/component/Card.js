@@ -18,16 +18,12 @@ const Card = ({ data }) => {
     
 
 
-    const [credentials,setcredentials]=useState({name:"",email:"",number:"",file:null,skills:"",experienceLevel:"",experienceinyears:""});
-    // console.log(credentials)
+    const [credentials,setcredentials]=useState({name:"",email:"",number:"",file:null,skills:"",experienceLevel:"",experienceinyears:""})
 
     
     const handleFormSubmit=async(event)=>{  
         console.log(credentials)      
         event.preventDefault();
-        
-        // const formDataToSend=new FormData();
-        // formDataToSend.append('myfile',credentials.file)
 
         try{
             const apply= await fetch("https://zobs-major-project.onrender.com/applyforjob",{
@@ -39,7 +35,7 @@ const Card = ({ data }) => {
         })
         
         const response = await apply.json();
-        // console.log("applied data  ",response)
+        console.log("applied data  ",response)
         }
 
         catch(error){
@@ -131,7 +127,7 @@ const Card = ({ data }) => {
                                 <div className="row">
                                     <div className='leftelementincardform'>
                                         <label>number</label>
-                                        <input type="number" name="number" placeholder="number" value={credentials.number} onChange={handleInputChange} />
+                                        <input type="number" name="number" placeholder="number"  value={credentials.number} onChange={handleInputChange} />
 
                                     </div>
                                     <div className="rightelementincardform">
@@ -203,7 +199,7 @@ const Card = ({ data }) => {
 
                             </div>
                             <div className='submitformdatabutton'>
-                            <button type="submit" className='' onClick={handleFormSubmit}>Submit</button>
+                            <button type="submit" className=''  onClick={handleFormSubmit}>Submit</button>
 
 
                             </div>

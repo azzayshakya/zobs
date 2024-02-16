@@ -4,8 +4,6 @@ import {} from '../Css/PostJob.css'
 import { Navigate } from 'react-router-dom';
 const PostJob = () => {
     const [credentials,setcredentials]= useState({ email: localStorage.getItem("userEmail"),companyName:"",jobTitle:"",minPrice:"",maxPrice:"",salaryType:"",jobLocation:"",postingDate:"",experienceLevel:"",employmentType:"",companyLogo:"",description:""})
-    console.log(localStorage.getItem("userEmail"))
-    console.log("fuck you")
     const HandleSubmit=async(event)=>{
         
         event.preventDefault();
@@ -26,7 +24,7 @@ const PostJob = () => {
         }
         if (json.success) {
             alert("Job posted successfully")
-            // Navigate("/")
+            Navigate("/")
         }
 
     }

@@ -1,4 +1,7 @@
+const fs = require('fs');
+
 const cloudinary = require("cloudinary").v2;
+
 
 require("dotenv").config({ path: "C:/Users/Hp/Desktop/social-network-webaap/.env" });
 
