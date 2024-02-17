@@ -253,9 +253,29 @@ left: 220px;
 @media(max-width:768px){
 
     .card-container{
-        border:2px blue solid;
+        /* border:2px blue solid; */
         margin-left: -300px;
         max-width: 650px;
+
+    }
+
+}
+@media(max-width:648px){
+
+    .card-container{
+        /* border:2px blue solid; */
+        margin-left: -300px;
+        max-width: 600px;
+
+    }
+
+}
+@media(max-width:420px){
+
+    .card-container{
+        border:2px blue solid;
+        margin-left: -300px;
+        max-width: 350px;
     }
 
 }

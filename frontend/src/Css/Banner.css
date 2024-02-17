@@ -80,6 +80,8 @@ margin-top: 150px;
    margin-top: 8px;
 }
 
+
+
 @media(max-width:768px){
     .banner{
         /* border: 2px  blue solid; */
@@ -164,5 +166,26 @@ margin-top: 150px;
         
 
     }
+
+}
+
+@media(max-width:492px){ 
+    .inputFeild{
+        border: 3px red solid;
+        margin-top: 100px;
+        left: 5%;
+ 
+     } 
+
+ }
+
+@media(max-width:420px){      
+        
+    .inputFeild{
+       border: 3px red solid;
+       margin-top: 150px;
+       left: 5%;
+
+    }   
 
 }

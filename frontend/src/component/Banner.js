@@ -8,7 +8,10 @@ const Banner = ({query,handleSearch}) => {
     
     return <div>
        <div className="banner">
-        <div className="BannerAbout">            
+
+        <div className="BannerAbout">  
+        <div>
+            </div>          
              <div className='Find-your-job'>Find Your New <span className='active'>Job</span>Today</div><br />
             <div className='Banner-Tag-line'>"Connecting talents to opportunities, one click at a time. Your career journey starts here. Explore, apply, succeed!"</div>
         </div>
@@ -22,14 +25,6 @@ const Banner = ({query,handleSearch}) => {
             <input type="text" placeholder='Search Type Of Job' value={query} onChange={handleSearch} />
 
             </div>
-            {/* 
-            <div className="SecoundInputField">
-            <div className='icons'>
-                <CiSearch/>
-            </div>
-            <input type="text" placeholder='Location'/>
-            </div> 
-            */}
             <div className="searchInBanner">
                 <button>Search</button>
             </div>
