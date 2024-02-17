@@ -3,10 +3,12 @@ const router = express.Router();
 const applicants = require("../model/ApplyModel");
 
 router.post("/applicants", async (req, res) => {
+    console.log("applicants")
     try {
+    
         const { email } = req.body;
         const applicantData = await applicants.find({ jobemail: email });
-        console.log(applicantData)
+        console.log("i love yoy" ,applicantData)
         
         if (applicantData) {
         

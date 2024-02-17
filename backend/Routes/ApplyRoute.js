@@ -3,17 +3,19 @@ const router = express.Router();
 const applicant = require("../model/ApplyModel");
 const multer = require('multer');
 const cloudinary = require("../middleware/cloudnary");
+const upload = require("../middleware/multer")
 
 // Multer configuration
-const upload = multer({
-    limits: {
-        fileSize: 10 * 1024 * 1024, // Set a 10MB file size limit (adjust as needed)
-    },
-});
+// const upload = multer({
+//     limits: {
+//         fileSize: 10 * 1024 * 1024, // Set a 10MB file size limit (adjust as needed)
+//     },
+// });
 
-router.post("/applyforjob", upload.single("myfile"), async (req, res) => {
+router.post("/applyforjob", upload.single("file"), async (req, res) => {
+    console.log("heyyy boii")
     try {
-        console.log("body                        ",req.body);
+        console.log("body    ",req.body);
 
         const result = await cloudinary.uploader.upload(req.body.formData.file.webkitRelativePath);
 
@@ -59,7 +61,7 @@ router.post("/applyforjob", upload.single("myfile"), async (req, res) => {
         res.status(200).json({ success: true, message: 'you have applied successfully' });
     } catch (error) {
         console.log( "apply for job route ", error);
-        res.status(500).json({ success: false, message: 'Internal Server Error' });
+        res.status(500).json({ success: false, message: 'Internal Server Error is here' });
     }
 });
 

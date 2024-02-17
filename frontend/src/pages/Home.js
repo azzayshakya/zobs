@@ -22,6 +22,7 @@ const Home =()=>{
     const [jobs,setjobs]=useState([]);
 
     const fetchjobdata=async()=>{
+        
         try{
 
             const alljobs= await fetch("https://zobs-major-project.onrender.com/alljobs",{
@@ -90,8 +91,6 @@ const Home =()=>{
         </div>
         
         <div className='mainContainerHome'>
-
-           
 
             <div className="midContainer">
             <Jobs result={result}/>

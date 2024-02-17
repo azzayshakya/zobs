@@ -4,6 +4,8 @@
     
     padding-right: 20px; 
     /* border: 2px blue solid; */
+  
+    
     
 
 }
@@ -26,6 +28,7 @@
 
 
 .card{
+    /* margin-top: 100px; */
     margin-top: 20px;
     height: 200px;
     /* border: 1px red solid; */
@@ -244,5 +247,15 @@ cursor: pointer;
 position: relative;
 left: 220px;
 /* top: -200px; */
+
+}
+
+@media(max-width:768px){
+
+    .card-container{
+        border:2px blue solid;
+        margin-left: -300px;
+        max-width: 650px;
+    }
 
 }
