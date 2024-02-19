@@ -26,6 +26,7 @@ app.use(require("./Routes/allJobroute"))
 app.use(require("./Routes/UpdateJob"))
 app.use(require("./Routes/ApplyRoute"))
 app.use(require("./Routes/applicantsroute"))
+app.use(require('./Routes/multer'))
 
 
 
