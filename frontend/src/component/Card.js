@@ -24,19 +24,32 @@ const Card = ({ data }) => {
     const handleFormSubmit=async(event)=>{  
         console.log(credentials)      
         event.preventDefault();
-
-        try{
-            const apply= await fetch("https://zobs-major-project.onrender.com/applyforjob",{
-            method:"POST",  
-            headers:{
-                'Content-Type': 'application/json'
-            },
-            body:JSON.stringify({ formData:credentials,jobid,jobtitle,jobemail})
-        })
         
-        const response = await apply.json();
-        console.log("applied data  ",response)
-        }
+
+        try {
+            const formData = new FormData();
+            formData.append('name', credentials.name);
+            formData.append('email', credentials.email);
+            formData.append('number', credentials.number);
+            formData.append('file', credentials.file);
+            formData.append('skills', credentials.skills);
+            formData.append('experienceLevel', credentials.experienceLevel);
+            formData.append('experienceinyears', credentials.experienceinyears);
+    
+            formData.append('jobid', jobid);
+            formData.append('jobtitle', jobtitle);
+            formData.append('jobemail', jobemail);
+    
+            const apply = await fetch("https://zobs-major-project.onrender.com/applyforjob", {
+                method: "POST",
+                headers: {
+                    'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
+                  },
+                body: formData
+            });
+            const response = await apply.json();
+        console.log("applied data  ", response);
+    }
 
         catch(error){
             console.log("card.js page error  " ,  error)

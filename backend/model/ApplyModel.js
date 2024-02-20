@@ -1,28 +1,53 @@
-const mongoose= require('mongoose')
-const {Schema} = mongoose;
+// Import Mongoose
+const mongoose = require('mongoose');
 
+// Define the schema for the applicant
+const applicantSchema = new mongoose.Schema({
+    jobid: {
+        type: String,
+        // required: true
+    },
+    jobtitle: {
+        type: String,
+        // required: true
+    },
+    jobemail: {
+        type: String,
+        // required: true
+    },
+    applicant: [{
+        name: {
+            type: String,
+            // required: true
+        },
+        email: {
+            type: String,
+            // required: true
+        },
+        number: {
+            type: String,
+            // required: true
+        },
+        skills: {
+            type: String,
+            // required: true
+        },
+        file: {
+            type: String,
+            // required: true
+        },
+        experienceLevel: {
+            type: String,
+            // required: true
+        },
+        experienceinyears: {
+            type: String
+        }
+    }]
+});
 
-const UserJob = new Schema({
-    jobid:{
-        type:String,
-        // default:true
-    },
-    jobtitle:{
-        type:String,
-        // default:true
-    },
-    jobemail:{
-        type:String,
-        // default:true
-    },
+// Create a model using the schema
+const Applicant = mongoose.model('Applicant', applicantSchema);
 
-    applicant:{
-        type:Array,
-        // default:true
-    },
-    link:{
-        type:String
-    }
-})
-
-module.exports=mongoose.model("applied jobs",UserJob)
+// Export the model
+module.exports = Applicant;

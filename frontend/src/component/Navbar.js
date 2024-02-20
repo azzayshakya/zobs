@@ -117,10 +117,10 @@ const Navbar=()=>{
           <div className="headerMobile">
             <div className="navbarMidMobile a">
               <ul>
-              <li className="navbarNames active">azay</li>
-                <li className="navbarNames">My Jobs</li>
-                <li className="navbarNames">azay</li>
-                <li className="navbarNames">Post A Job</li>
+              <li className="navbarNames active"><Link className='LinkTAG LinkTAGHome active' to={"/"}>Home</Link></li>
+                <li className="navbarNames"><Link className='LinkTAG' to={"/MyCreatedJobs"}>My Jobs</Link></li>
+                <li className="navbarNames"><Link className='LinkTAG' to={"/JobApplicants"}>Job Applicants</Link></li>
+                <li className="navbarNames"><Link className='LinkTAG' to={"/PostAJob"}>Post A Job</Link></li>dddddd 
               </ul>
             </div>
 

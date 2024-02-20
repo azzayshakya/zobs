@@ -3,24 +3,21 @@ const router = express.Router();
 const applicant = require("../model/ApplyModel");
 const multer = require('multer');
 const cloudinary = require("../middleware/cloudnary");
-const upload = require("../middleware/multer")
+// const upload = require("../middleware/multer");
 
 // Multer configuration
-// const upload = multer({
-//     limits: {
-//         fileSize: 10 * 1024 * 1024, // Set a 10MB file size limit (adjust as needed)
-//     },
-// });
+const storage = multer.memoryStorage();
+const multerUpload = multer({ storage: storage });
 
-router.post("/applyforjob", upload.single("file"), async (req, res) => {
+router.post("/applyforjob", multerUpload.single("file"), async (req, res) => {
     console.log("heyyy boii")
     try {
-        console.log("body    ",req.body);
+        console.log("body    ", req.body);
+        console.log("file    ", req.file);
 
-        const result = await cloudinary.uploader.upload(req.body.formData.file.webkitRelativePath);
+        const result = await cloudinary.uploader.upload(req.file.buffer); 
 
-        const { jobid, jobtitle, jobemail, formData } = req.body;
-        const { name, email, number, file, skills, experienceLevel, experienceinyears } = formData;
+        const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body;
 
         let jobdata = await applicant.findOne({ jobid });
 
@@ -58,9 +55,9 @@ router.post("/applyforjob", upload.single("file"), async (req, res) => {
             );
         }
 
-        res.status(200).json({ success: true, message: 'you have applied successfully' });
+        res.status(200).json({ success: true, message: 'You have applied successfully' });
     } catch (error) {
-        console.log( "apply for job route ", error);
+        console.log("apply for job route ", error);
         res.status(500).json({ success: false, message: 'Internal Server Error is here' });
     }
 });
