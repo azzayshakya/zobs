@@ -11,6 +11,7 @@ const Home =()=>{
 
     //for the search in banner bitch
     const [query ,setquery]=useState("");
+    const [loading, setLoading] = useState(true);
     const handleSearch=(event)=>{
         setquery(event.target.value);
     }
@@ -24,6 +25,8 @@ const Home =()=>{
     const fetchjobdata=async()=>{
         
         try{
+            setLoading(true)
+
 
             const alljobs= await fetch("https://zobs-major-project.onrender.com/alljobs",{
                 method:"POST",
@@ -49,6 +52,7 @@ const Home =()=>{
 
         }
         finally{
+            setLoading(false)
         }
 
     }
@@ -92,9 +96,18 @@ const Home =()=>{
         
         <div className='mainContainerHome'>
 
+        {loading ? (
+                <div className="DataLoading">
+                    <h2>Data is loading !</h2>
+                    <div className="loader"></div>
+                </div>
+            ) : (
+
             <div className="midContainer">
             <Jobs result={result}/>
             </div>
+            )}
+
 
             
 

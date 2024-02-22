@@ -10,7 +10,7 @@ router.post("/MyCreatedJobs", async (req, res) => {
 
         if (postedJobs.length > 0) {
             
-            // console.log("Your posted jobs:", postedJobs);
+            console.log("Your posted jobs data is here :", postedJobs);
             res.status(200).json({postedJobs});
 
         } else {
