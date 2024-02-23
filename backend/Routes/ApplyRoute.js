@@ -3,22 +3,19 @@ const router = express.Router();
 const applicant = require("../model/ApplyModel");
 const multer = require('multer');
 const cloudinary = require("../middleware/cloudnary");
-// const upload = require("../middleware/multer");
+const upload = require("../middleware/multer")
 
-// Multer configuration
 const storage = multer.memoryStorage();
 const multerUpload = multer({ storage: storage });
 
 router.post("/applyforjob", multerUpload.single("file"), async (req, res) => {
-    console.log("heyyy boii")
+    console.log("heyyy boii", req.body)
     try {
         console.log("body    ", req.body);
         console.log("file    ", req.file);
 
         const result = await cloudinary.uploader.upload(req.file.buffer); 
-
         const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body;
-
         let jobdata = await applicant.findOne({ jobid });
 
         if (!jobdata) {
