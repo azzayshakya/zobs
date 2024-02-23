@@ -16,12 +16,14 @@ router.post("/SignUp",async(req,res)=>{
             mobileNumber,
         } = req.body;
         
+        const lowercaseEmail = email.toLowerCase();
+        
 
         await users.create({
             name,
-            email,
+            email:lowercaseEmail,
             mobileNumber,
-            password: HashedPassword,
+            password,
         }
         )
         res.status(201).json({success:true,message:"sign up successfully"})
