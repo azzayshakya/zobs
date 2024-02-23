@@ -1,24 +1,29 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { FiCalendar, FiClock, FiDollarSign, FiMapPin } from 'react-icons/fi';
-import '../Css/Card.css';
+import '../Css/Card.css'; 
 // import { json } from 'express';
 
 const Card = ({ data }) => {   
+    
+   
+    
 
     const [popup , setPopup]=useState(false);
     const togglePopup = () => {
         setPopup(!popup);
     }
-
     const jobid=data._id;
     const jobtitle=data.jobTitle;
     const jobemail=data.email;
+    
+
 
     const [credentials,setcredentials]=useState({name:"",email:"",number:"",file:null,skills:"",experienceLevel:"",experienceinyears:""})
+
     
     const handleFormSubmit=async(event)=>{  
-        console.log(credentials,jobTitle,jobemail,jobid)      
+        console.log(credentials)      
         event.preventDefault();
         
 
@@ -53,30 +58,41 @@ const Card = ({ data }) => {
 
 
         try {
-                const formData = new FormData();
-                formData.append('name', credentials.name);
-                formData.append('email', credentials.email);
-                formData.append('number', credentials.number);
-                formData.append('file', credentials.file);
-                formData.append('skills', credentials.skills);
-                formData.append('experienceLevel', credentials.experienceLevel);
-                formData.append('experienceinyears', credentials.experienceinyears);
-        
-                formData.append('jobid', jobid);
-                formData.append('jobtitle', jobtitle);
-                formData.append('jobemail', jobemail);
-                console.log("formdata",formData)
+            const formData = new FormData();
+            formData.append('name', credentials.name);
+            formData.append('email', credentials.email);
+            formData.append('number', credentials.number);
+            formData.append('file', credentials.file);
+            formData.append('skills', credentials.skills);
+            formData.append('experienceLevel', credentials.experienceLevel);
+            formData.append('experienceinyears', credentials.experienceinyears);
     
-
+            formData.append('jobid', jobid);
+            formData.append('jobtitle', jobtitle);
+            formData.append('jobemail', jobemail);
+    
+            const apply = await fetch("https://zobs-major-project.onrender.com/createPost", {
+                method: "POST",
+                // headers: {
+                //     'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
+                //   },
+                body: formData
             });
             const response = await apply.json();
         console.log("applied data  ", response);
     }
 
         catch(error){
-            console.log("card.js page error    " ,  error)
+            console.log("card.js page error  " ,  error)
         }
 
+
+
+
+
+
+
+        
     }
     const handleInputChange=(event)=>{
         setcredentials({...credentials,[event.target.name]:event.target.value})

@@ -1,21 +1,18 @@
 const express = require('express');
 const router = express.Router();
 const applicant = require("../model/ApplyModel");
-const multer = require('multer');
-const cloudinary = require("../middleware/cloudnary");
-const upload = require("../middleware/multer")
 
-const storage = multer.memoryStorage();
-const multerUpload = multer({ storage: storage });
-
-router.post("/applyforjob", multerUpload.single("file"), async (req, res) => {
-    console.log("heyyy boii", req.body)
+router.post("/applyforjob", async (req, res) => {
     try {
-        console.log("body    ", req.body);
-        console.log("file    ", req.file);
+        console.log("Received data: ", req.body);
 
-        const result = await cloudinary.uploader.upload(req.file.buffer); 
-        const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body;
+        const { secure_url } = req.body;
+        const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body.data;
+
+        // console.log(req.body.data)
+    
+        
+
         let jobdata = await applicant.findOne({ jobid });
 
         if (!jobdata) {
@@ -28,7 +25,7 @@ router.post("/applyforjob", multerUpload.single("file"), async (req, res) => {
                     email,
                     number,
                     skills,
-                    file: result.secure_url,
+                    file: secure_url,
                     experienceLevel,
                     experienceinyears,
                 }],
@@ -43,7 +40,7 @@ router.post("/applyforjob", multerUpload.single("file"), async (req, res) => {
                             email,
                             number,
                             skills,
-                            file: result.secure_url,
+                            file: secure_url,
                             experienceLevel,
                             experienceinyears,
                         },
