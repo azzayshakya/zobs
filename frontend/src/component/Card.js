@@ -71,11 +71,11 @@ const Card = ({ data }) => {
             formData.append('jobtitle', jobtitle);
             formData.append('jobemail', jobemail);
     
-            const apply = await fetch("http://localhost:5000/applyforjob", {
+            const apply = await fetch("http://localhost:5000/createPost", {
                 method: "POST",
-                headers: {
-                    'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
-                  },
+                // headers: {
+                //     'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
+                //   },
                 body: formData
             });
             const response = await apply.json();
