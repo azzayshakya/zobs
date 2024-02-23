@@ -67,16 +67,7 @@ const Card = ({ data }) => {
                 formData.append('jobemail', jobemail);
                 console.log("formdata",formData)
     
-            const apply = await fetch("http://localhost:5000/applyforjob", {
-            
-            method: "POST",
-                // headers: {
-                //     'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
-                //   },
-                  headers: {
-                        'Content-Type': 'multipart/form-data',
-                    },
-                body:formData
+
             });
             const response = await apply.json();
         console.log("applied data  ", response);
