@@ -4,13 +4,14 @@ const multer = require('multer');
 const upload = multer({ dest: 'uploads/' });
 const cloudinary = require('../middleware/cloudnary');
 
-router.post('/createPost', upload.any(), async (req, res) => {
+router.post('/createPost',upload.single("file"), async (req, res) => {
     try {
         const result = await cloudinary.uploader.upload(req.files[0].path, { resource_type: "raw" });
         const data=req.body;
-        // console.log("data:   " , data)
+        console.log(result)
         
-        await fetch('http://localhost:5000/applyforjob', {
+        
+        await fetch('https://zobs-major-project.onrender.com/applyforjob', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
