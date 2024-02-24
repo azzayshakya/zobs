@@ -6,6 +6,8 @@ import '../Css/Card.css';
 
 
 const Card = ({ data }) => {   
+
+    console.log("alljobs:   ",data)
     
    
     
