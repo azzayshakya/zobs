@@ -24,7 +24,7 @@ const Card = ({ data }) => {
 
     
     const handleFormSubmit=async(event)=>{  
-        console.log(credentials)      
+        // console.log(credentials)      
         event.preventDefault();
         try {
             const formData = new FormData();

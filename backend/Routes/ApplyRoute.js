@@ -4,8 +4,8 @@ const applicant = require("../model/ApplyModel");
 
 router.post("/applyforjob", async (req, res) => {
     try {
-        console.log("Received data: ", req.body);
-
+        
+        // console.log("Received data: ", req.body);
         const { secure_url } = req.body;
         const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body.data;
     
