@@ -7,7 +7,7 @@ const PostJob = () => {
     const HandleSubmit=async(event)=>{
         
         event.preventDefault();
-        console.log(JSON.stringify(credentials))       
+        // console.log(JSON.stringify(credentials))       
         const response=await fetch("https://zobs-major-project.onrender.com/PostJob",{
             method: 'POST',
             headers: {

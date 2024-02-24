@@ -11,7 +11,7 @@ const Login=()=>{
     const [credentials,setcredentials]=useState({email:"" ,password:""});
     const Navigate=useNavigate();
     const handleSubmit=async(event)=>{
-    console.log(JSON.stringify({email:credentials.email,password:credentials.password}))
+    
 
         event.preventDefault();
         const response=await fetch("https://zobs-major-project.onrender.com/LogIn",{        
@@ -33,14 +33,7 @@ const Login=()=>{
 
             localStorage.setItem("authToken",json.authToken)
             localStorage.setItem("userEmail",credentials.email)
-            // console.log("userEmial",email)
-
-            console.log(localStorage.getItem("userEmail"))
-
-            console.log(localStorage.getItem("authToken"))
-        
             alert("login successfully")
-
             Navigate("/")
         }
     }

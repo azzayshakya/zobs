@@ -80,7 +80,7 @@ router.post('/PostJob', async (req, res) => {
     res.status(200).json({ success: true, message: 'Job posted successfully' });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ success: false, message: 'Internal Server Error' });
+    res.status(500).json({ success: false, message: 'Job can not be posted successfully , Internal Server Error' });
   }
 });
 

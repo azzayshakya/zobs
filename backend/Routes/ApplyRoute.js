@@ -8,8 +8,6 @@ router.post("/applyforjob", async (req, res) => {
 
         const { secure_url } = req.body;
         const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body.data;
-
-        // console.log(req.body.data)
     
         
 

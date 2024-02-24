@@ -14,15 +14,13 @@ const Navbar=()=>{
         setIsOpen(!IsOpen);
     }
     const handleLogout=()=>{
-        console.log("before logout",localStorage.getItem("authToken") )
-        console.log("userEmail  ",localStorage.getItem("userEmail"))
+
         
 
 
         localStorage.removeItem("authToken");
         localStorage.removeItem("userEmail")
-        console.log("succesfully logout",localStorage.getItem("authToken") )
-        console.log("after logOut userEmail  ",localStorage.getItem("userEmail"))
+
 
         Navigate("LogIn")
     }

@@ -1,11 +1,11 @@
     import React,{useEffect, useState} from "react";
     import {} from "../Css/ajay.css"
-    import { Link } from "react-router-dom";
+    import { Link, Navigate } from "react-router-dom";
     import { UseSelector, useSelector } from "react-redux";
 import Navbar from "../component/Navbar";
     const UpdatePage = () => {
     const products = useSelector(state => state.allProducts.products);
-    console.log(products)
+    // console.log(products)
       
 
     const [updatedJob, setUpdatedJob] = useState({
@@ -49,6 +49,10 @@ import Navbar from "../component/Navbar";
                 });
                 const data = await response.json();
                 console.log("updated job ", data);
+                if(data.success){
+                    Navigate("/")
+                }
+                
             } catch (error) {
                 console.error(error);
             }

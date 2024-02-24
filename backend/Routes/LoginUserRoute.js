@@ -13,7 +13,6 @@ router.post('/LogIn', async (req, res) => {
         try {
            
             const user = await users.findOne({ email });
-            // console.log(user)
 
             if (!user) {
                 return res.status(500).json({ success: false, message: 'User not found' });

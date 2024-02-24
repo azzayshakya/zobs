@@ -19,7 +19,7 @@ const JobApplicants = () => {
             });
             const response = await fetchedData.json();
             setJobsData(response.data);
-            console.log(response.data);
+            
         } catch (error) {
             console.error("Error fetching data:", error);
             setError("Error fetching data");
@@ -56,9 +56,9 @@ const JobApplicants = () => {
                                     {jobsData.map((job) => (
                                         <div className="mainc" key={job._id}>
                                             <div className="maintop">
-                                                <h3>Job ID: {job.jobid}</h3>
-                                                <p>Job Title: {job.jobtitle}</p>
-                                                <p>Job Email: {job.jobemail}</p>
+                                                <h3>Job Title: {job.jobtitle}</h3>
+                                                <p>Job ID: {job.jobid}</p>
+                                                <p>Your Email: {job.jobemail}</p>
                                                 <h4>Applicants:</h4>
                                             </div>
                                             <ul>
@@ -69,7 +69,7 @@ const JobApplicants = () => {
                                                             <p>Email: {applicant.email}</p>
                                                             <p>Number: {applicant.number}</p>
                                                             <p>Skills: {applicant.skills}</p>
-                                                            <p>File: <button onClick={() => handleOpenFile(applicant.file)}>Open</button></p>
+                                                            <p>Resume: <button className="resumebutton" onClick={() => handleOpenFile(applicant.file)}>Open</button></p>
                                                         </div>
                                                     </li>
                                                 ))}

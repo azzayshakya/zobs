@@ -29,7 +29,7 @@ router.post('/updateJob', async (req, res) => {
 
         // Find the index of the job to update in the user's job array
         const jobIndex = user.job.findIndex(job => job._id === jobId);
-        console.log("Job index in user's job array:", jobIndex);
+        // console.log("Job index in user's job array:", jobIndex);
 
         if (jobIndex === -1) {
             return res.status(404).json({ message: 'Job not found in UserJob' });
@@ -37,11 +37,11 @@ router.post('/updateJob', async (req, res) => {
 
         // Update the job object within the array
         user.job[jobIndex] = updatedJobData;
-        console.log("User after updating job:", user);
+        // console.log("User after updating job:", user);
 
         // Save the updated UserJob document
         await user.save();
-        console.log("UserJob saved successfully.");
+        // console.log("UserJob saved successfully.");
 
         return res.status(200).json({ updatedJob, user });
     } catch (error) {

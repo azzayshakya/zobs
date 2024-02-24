@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, Navigate } from 'react-router-dom';
 import { FiCalendar, FiClock, FiDollarSign, FiMapPin } from 'react-icons/fi';
 import '../Css/Card.css'; 
-// import { json } from 'express';
+// import { Navigate } from 'react-router-dom';
+
 
 const Card = ({ data }) => {   
     
@@ -25,38 +26,6 @@ const Card = ({ data }) => {
     const handleFormSubmit=async(event)=>{  
         console.log(credentials)      
         event.preventDefault();
-        
-
-    //     try {
-    //         const formData = new FormData();
-    //         formData.append('name', credentials.name);
-    //         formData.append('email', credentials.email);
-    //         formData.append('number', credentials.number);
-    //         formData.append('file', credentials.file);
-    //         formData.append('skills', credentials.skills);
-    //         formData.append('experienceLevel', credentials.experienceLevel);
-    //         formData.append('experienceinyears', credentials.experienceinyears);
-    
-    //         formData.append('jobid', jobid);
-    //         formData.append('jobtitle', jobtitle);
-    //         formData.append('jobemail', jobemail);
-    
-    //         const apply = await fetch("https://zobs-major-project.onrender.com/applyforjob", {
-    //             method: "POST",
-    //             headers: {
-    //                 'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
-    //               },
-    //             body: formData
-    //         });
-    //         const response = await apply.json();
-    //     console.log("applied data  ", response);
-    // }
-
-    //     catch(error){
-    //         console.log("card.js page error  " ,  error)
-    //     }
-
-
         try {
             const formData = new FormData();
             formData.append('name', credentials.name);
@@ -78,8 +47,14 @@ const Card = ({ data }) => {
                 //   },
                 body: formData
             });
-            const response = await apply.json();
-        console.log("applied data  ", response);
+            const json = await apply.json();
+            console.log(json)
+            if(json.success){
+                Navigate("/")
+            }
+            if(!json.success){
+                console.log("providing wrong information")
+            }
     }
 
         catch(error){

@@ -8,7 +8,7 @@ router.post('/createPost',upload.single("file"), async (req, res) => {
     try {
         const result = await cloudinary.uploader.upload(req.files[0].path, { resource_type: "raw" });
         const data=req.body;
-        console.log(result)
+        console.log("multer",result)
         
         
         await fetch('https://zobs-major-project.onrender.com/applyforjob', {

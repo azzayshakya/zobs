@@ -10,8 +10,7 @@ const Banner = ({query,handleSearch}) => {
        <div className="banner">
 
         <div className="BannerAbout">  
-        <div>
-            </div>          
+              
              <div className='Find-your-job'>Find Your New <span className='active'>Job</span>Today</div><br />
             <div className='Banner-Tag-line'>"Connecting talents to opportunities, one click at a time. Your career journey starts here. Explore, apply, succeed!"</div>
         </div>

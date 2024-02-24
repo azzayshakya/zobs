@@ -1,9 +1,10 @@
 .homeMain{
-    background: url("https://images.unsplash.com/photo-1497366811353-6870744d04b2?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background: url("https://img.freepik.com/free-vector/paper-style-dynamic-lines-background_23-2149008629.jpg?w=1060&t=st=1708774036~exp=1708774636~hmac=11f79a34ee7f59628697764c61de075e2d2399d2f22a3a2e1775f75a533fb93d");
     background-position:center ;
     background-size: cover;
     height: 711px;
     overflow-y: auto;
+    /* filter: brightness(50%); */
 }
 .mainContainerHome{
     /* border: 2px green solid; */

@@ -1,18 +1,26 @@
 .banner{
-/* border: 2px green solid; */
-    /* margin-left: 100px; */
+
+
 
     border-radius: 52px;
 
 background: rgba( 255, 255, 255, 0.25 );
 backdrop-filter:blur(10px) ;
-padding-left: 100px;
-width: 50%;
-height: 250px;
+padding-top: 11px;
+padding-left: 50px;
+padding-right: 50px;
+width: 45%;
+height: 300px;
 margin-top: 150px;
+margin-left: 50px;
 
 
 }
+.BannerAbout{
+    
+    /* border: 2px red solid; */
+}
+
 .BannerAbout .Find-your-job{
     font-size: 40px;
     margin-top: 50px;
@@ -70,7 +78,7 @@ margin-top: 150px;
     border-bottom-right-radius: 52px;
     background-color:#3575E2;
     color: aliceblue;
-    font-size: 20px;
+    font-size:16px;
     cursor: pointer;
 }
 .icons{
@@ -103,9 +111,7 @@ margin-top: 150px;
         /* margin-bottom: 50px; */
         
     }
-    .BannerAbout .Banner-Tag-line{
     
-    }
     .inputFeild{
         display: flex;
         margin-top: 50px;
@@ -171,7 +177,7 @@ margin-top: 150px;
 
 @media(max-width:492px){ 
     .inputFeild{
-        border: 3px red solid;
+        /* border: 3px red solid; */
         margin-top: 100px;
         left: 5%;
  
@@ -182,7 +188,7 @@ margin-top: 150px;
 @media(max-width:420px){      
         
     .inputFeild{
-       border: 3px red solid;
+       /* border: 3px red solid; */
        margin-top: 150px;
        left: 5%;
 

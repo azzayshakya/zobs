@@ -8,7 +8,6 @@ router.post("/applicants", async (req, res) => {
     
         const { email } = req.body;
         const applicantData = await applicants.find({ jobemail: email });
-        console.log("i love yoy" ,applicantData)
         
         if (applicantData) {
         

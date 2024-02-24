@@ -80,15 +80,16 @@ backdrop-filter:blur(10px) ;
     top: -130px;
     left: 100px;
     font-size: 15px;
-    color: rgb(88, 87, 87);
-    /* color: white; */
+    /* color: rgb(88, 87, 87); */
+    color: white;
     
 
     /* border: 2px yellow solid; */
 }
 
 .MidRowOfTheCard span {
-    /* border: 2px red solid; */
+  
+   
     padding: 0px 6px;    
 
 }
@@ -115,7 +116,9 @@ backdrop-filter:blur(10px) ;
     border: none;
     border-radius: 52px;
 /* background: rgba( 255, 255, 255, 0.25 ); */
-background-color: white;
+/* background-color: white; */
+background-color: #3575E2;
+color: wheat;
 backdrop-filter:blur(10px) ;
 height: 50px;
 width: 100px;
@@ -130,6 +133,7 @@ top: -200px;
 
  
 .applyForm{
+    margin-top: 20px;
     padding: 0px 20px;
     border: 2px  black solid;
     position:  relative;
@@ -238,10 +242,15 @@ top: -200px;
     border: none;
     border-radius: 52px;
 /* background: rgba( 255, 255, 255, 0.25 ); */
-background-color: white;
-backdrop-filter:blur(10px) ;
+
+background-color: #3575E2;
+color: white;
+font-size: 15px;
+/* backdrop-filter:blur(10px) ; */
 height: 50px;
 width: 100px;
+
+
 
 
 cursor: pointer;
