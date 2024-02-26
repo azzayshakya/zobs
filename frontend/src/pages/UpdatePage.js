@@ -1,13 +1,15 @@
     import React,{useEffect, useState} from "react";
     import {} from "../Css/UpdatePage.css"
     import { Link } from "react-router-dom";
-    import { useNavigate } from 'react-router-dom';
+    import { useNavigate } from "react-router-dom";
+
     import { UseSelector, useSelector } from "react-redux";
 import Navbar from "../component/Navbar";
 
 
     const UpdatePage = () => {
         const Navigate=useNavigate();
+
 
         const [showPopup, setShowPopup] = useState(false);
         const [SubmitButton,setSubmitButton]=useState(true);
@@ -63,7 +65,7 @@ import Navbar from "../component/Navbar";
                 if(data.success){
                     setShowPopup(false)
                     setSubmitButton(true)
-                    Navigate("UpdatePage")
+                    Navigate("/")
                 }
                 else{
                     setShowPopup(false)
