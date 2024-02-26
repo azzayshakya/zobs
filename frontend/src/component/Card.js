@@ -7,10 +7,11 @@ import '../Css/Card.css';
 
 const Card = ({ data }) => {   
 
-    console.log("alljobs:   ",data)
-    
-   
-    
+    // console.log("alljobs:   ",data)
+
+    const [showPopup, setShowPopup] = useState(false);
+    const [ApplyButton,setApplyButton]=useState(true);
+
 
     const [popup , setPopup]=useState(false);
     const togglePopup = () => {
@@ -27,6 +28,8 @@ const Card = ({ data }) => {
     
     const handleFormSubmit=async(event)=>{  
         // console.log(credentials)      
+        setApplyButton(false)
+        setShowPopup(true)
         event.preventDefault();
         try {
             const formData = new FormData();
@@ -52,10 +55,16 @@ const Card = ({ data }) => {
             const json = await apply.json();
             console.log(json)
             if(json.success){
+                setShowPopup(false)
+                setApplyButton(true)
                 Navigate("/")
+                alert("providing wrong informaintion")
+
             }
             if(!json.success){
-                console.log("providing wrong information")
+                setShowPopup(false)
+                setApplyButton(true)
+                alert("providing wrong informaintion")
             }
     }
 
@@ -230,11 +239,21 @@ const Card = ({ data }) => {
                             <div>
 
                             </div>
-                            <div className='submitformdatabutton'>
-                            <button type="submit" className=''  onClick={handleFormSubmit}>Submit</button>
+
+                            {showPopup &&
+                    <div className="SingingUpLoading">
+                    <h2>Please Wait !</h2>
+                    <div className="SignUpLoader"></div>
+                </div>
+                }
+                {ApplyButton &&
+                   <div className='submitformdatabutton'>
+                   <button type="submit" className=''  onClick={handleFormSubmit}>Submit</button>
 
 
-                            </div>
+                   </div>
+                }
+                            
                             </div>
 
 

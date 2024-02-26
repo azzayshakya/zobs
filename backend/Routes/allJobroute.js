@@ -4,7 +4,7 @@ const alljobs = require("../model/PostJob")
 
 router.post("/alljobs", async (req, res) => {
     try {
-        const data = await alljobs.find();      
+        const data = await alljobs.find();   
         res.status(200).json({ success: true, data });
 
     } catch (error) {

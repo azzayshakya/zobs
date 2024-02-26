@@ -9,8 +9,12 @@ import { useNavigate } from "react-router-dom";
 
 const Login=()=>{
     const [credentials,setcredentials]=useState({email:"" ,password:""});
+    const [showPopup, setShowPopup] = useState(false);
+    const [signInButton,setsignInButton]=useState(true);
     const Navigate=useNavigate();
     const handleSubmit=async(event)=>{
+        setsignInButton(false)
+        setShowPopup(true)
     
 
         event.preventDefault();
@@ -27,9 +31,13 @@ const Login=()=>{
         console.log(json);
 
         if(!json.success){
+            setShowPopup(false)
+            setsignInButton(true)
             alert("wrong information you are providing")
         }
         if(json.success){
+            setShowPopup(false)
+            setsignInButton(true)
 
             localStorage.setItem("authToken",json.authToken)
             localStorage.setItem("userEmail",credentials.email)
@@ -79,10 +87,22 @@ const Login=()=>{
                         <input type="password" name="password" value={credentials.password} onChange={HandleNamechange} placeholder="Password"/>     
                     {/* <input type="password" name="password" value={credentials.password} onChange={HandleNamechange} id="passwordInput" placeholder="Password"/> */}
                 </div> 
-
-                <div className="FormButton">
-                    <button onClick={handleSubmit}>Submit</button>
+                {showPopup &&
+                    <div className="SingingUpLoading">
+                    <h2>Please Wait !</h2>
+                    <div className="SignUpLoader"></div>
                 </div>
+                }
+                {signInButton &&
+                    <div className="FormButton">
+                    <button onClick={handleSubmit}>Submit</button>
+                    </div>
+                }
+                
+                
+
+
+                
 
             </div>
 

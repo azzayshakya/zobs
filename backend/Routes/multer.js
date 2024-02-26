@@ -19,10 +19,10 @@ router.post('/createPost',upload.any(), async (req, res) => {
             body: JSON.stringify({ secure_url: result.secure_url, data:data })
         });
 
-        res.json({ message: 'success' });
+        res.status(200).json({ success: true, message: 'multer send the data' });
     } catch (err) {
         console.log(err);
-        res.status(500).json({ error: 'Internal Server Error' });
+        res.status(500).json({ success: false, message: 'multer error' });
     }
 });
 

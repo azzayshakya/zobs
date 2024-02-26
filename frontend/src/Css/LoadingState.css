@@ -1,0 +1,81 @@
+.DataLoading{
+    height: 200px;
+border: none;
+border-radius: 52px;
+background: rgba( 255, 255, 255, 0.25 );
+backdrop-filter:blur(10px) ;
+margin-top: 50px;
+}
+
+.DataLoading h2{
+    position: relative;
+    top: 20px;
+    left: 470px;
+    
+
+}
+.loader {
+    position: relative;
+    top: 20px;
+    left: 520px;
+
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid  black;
+    width: 120px;
+    height: 120px;
+    -webkit-animation: spin 2s linear infinite; /* Safari */
+    animation: spin 2s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+
+.SingingUpLoading{
+  position:relative;
+  top: -35px;
+
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 52px;
+  background: rgba( 255, 255, 255, 0.25 );
+  backdrop-filter:blur(10px) ;
+  margin-top: 50px;
+
+}
+
+.SingingUpLoading h2{
+  position: relative;
+  top: 0px;
+  left: 40px;
+  font-size:20px;
+
+}
+
+.SignUpLoader{
+  /* border: 2px green solid; */
+    position: relative;
+    top: 0px;
+    left:60px;
+    border: 16px solid #f3f3f3;
+    border-radius: 50%;
+    border-top: 16px solid  black;
+    width: 20px;
+    height: 20px;
+    -webkit-animation: spin 2s linear infinite;
+    animation: spin 2s linear infinite;
+
+}
+
+  

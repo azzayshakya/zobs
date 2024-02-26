@@ -1,7 +1,9 @@
 import React, { useState } from "react"; 
 import Navbar from "../component/Navbar";
 import {} from '../Css/Login.css'
-import { Lock } from 'lucide-react';
+import {} from '../Css/LoadingState.css'
+
+import { Flashlight, Lock } from 'lucide-react';
 import { Mail } from 'lucide-react';
 import { GiCrossFlare } from "react-icons/gi";
 import { User } from 'lucide-react';
@@ -11,9 +13,13 @@ import { useNavigate } from "react-router-dom";
 const SignUp=()=>{
 
     const [credentials,setcredentials]=useState({name:"" ,email:"",mobileNumber:"",password:""});
+    const [showPopup, setShowPopup] = useState(false);
+    const [signUpButton,setsignUpButton]=useState(true);
     const Navigate= useNavigate();
 
     const handleSubmit=async(event)=>{
+        setsignUpButton(false)
+        setShowPopup(true)
         event.preventDefault();
         const response= await fetch("https://zobs-major-project.onrender.com/SignUp",{
             method:"POST",
@@ -25,9 +31,14 @@ const SignUp=()=>{
         const json=await response.json();
         console.log(json)
         if(!json.success){
+            setShowPopup(false)
+            setsignUpButton(true)
             alert("wrong credintles")
         }
         if(json.success){
+
+            setShowPopup(false)
+            setsignUpButton(true)
             alert("signup successfully")
             Navigate("/LogIn")
             
@@ -84,16 +95,29 @@ const SignUp=()=>{
                 <div className="formIcon"><Lock/></div>         
                     <input type="password" name="password" value={credentials.password} onChange={handleNameChange} id="" placeholder="Password"/>
                 </div> 
-
-                <div className="FormButton">
-                    <button onClick={handleSubmit}>SignUp</button>
+                {showPopup &&
+                    <div className="SingingUpLoading">
+                    <h2>Please Wait !</h2>
+                    <div className="SignUpLoader"></div>
                 </div>
+                }
+                {signUpButton &&
+                <div className="FormButton">
+                    
+                <button onClick={handleSubmit}>SignUp</button>
+            </div>
+
+                }
+
+                
 
             </div>
 
             </div>
 
         </div>
+
+        
     </div>
     
     </>

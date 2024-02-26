@@ -37,7 +37,8 @@ const Home =()=>{
             })
             const response2=await alljobs.json()
             // console.log("alljobs data", response2.data)
-            setjobs(response2.data)
+            const responsedata= response2.data.reverse();
+            setjobs(responsedata)
 
             
 
