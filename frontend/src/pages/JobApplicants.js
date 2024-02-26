@@ -79,7 +79,9 @@ const JobApplicants = () => {
                                     ))}
                                 </div>
                             ) : (
-                                <h2>No jobs found</h2>
+                                <div className="DataLoading">
+                                <h2 style={{padding:"50px 0px"}}>No applicants found !</h2>
+                                </div>
                             )}
                         </div>
                     )}

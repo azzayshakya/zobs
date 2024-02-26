@@ -1,9 +1,18 @@
     import React,{useEffect, useState} from "react";
-    import {} from "../Css/ajay.css"
-    import { Link, Navigate } from "react-router-dom";
+    import {} from "../Css/UpdatePage.css"
+    import { Link } from "react-router-dom";
+    import { useNavigate } from 'react-router-dom';
     import { UseSelector, useSelector } from "react-redux";
 import Navbar from "../component/Navbar";
+
+
     const UpdatePage = () => {
+        const Navigate=useNavigate();
+
+        const [showPopup, setShowPopup] = useState(false);
+        const [SubmitButton,setSubmitButton]=useState(true);
+
+
     const products = useSelector(state => state.allProducts.products);
     // console.log(products)
       
@@ -38,6 +47,8 @@ import Navbar from "../component/Navbar";
     
 
         const handleSubmit = async (e) => {
+            setSubmitButton(false)
+        setShowPopup(true)
             e.preventDefault();
             try {
                 const response = await fetch("https://zobs-major-project.onrender.com/updateJob", {
@@ -50,9 +61,14 @@ import Navbar from "../component/Navbar";
                 const data = await response.json();
                 console.log("updated job ", data);
                 if(data.success){
-                    Navigate("/")
+                    setShowPopup(false)
+                    setSubmitButton(true)
+                    Navigate("UpdatePage")
                 }
-                
+                else{
+                    setShowPopup(false)
+                    setSubmitButton(true)
+                }
             } catch (error) {
                 console.error(error);
             }
@@ -60,6 +76,7 @@ import Navbar from "../component/Navbar";
         
     
         return (<>
+        <div className="UpdateJobPage">
 
         <div>
             <Navbar/>
@@ -187,13 +204,25 @@ import Navbar from "../component/Navbar";
                 <textarea name="description" id="" cols="70" rows="8" placeholder='Description' value={updatedJob.description} onChange={handleInputChange} ></textarea>
             </div>
 
-            <div className="SubmitButton" onClick={handleSubmit}>
-            <button>Submit</button>
-        </div>
+
+            {showPopup &&
+                    <div className="SingingUpLoading">
+                    <h2 style={{marginLeft:"37%"}}>Please Wait !</h2>
+                    <div className="SignUpLoader"></div>
+                </div>
+                }
+                {SubmitButton &&
+                    <div className="SubmitButton" onClick={handleSubmit}>
+                    <button>Submit</button>
+                </div>
+                }
+
+            
             
         </div>
 
         
+        </div>
         </div>
 
                 

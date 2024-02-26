@@ -7,19 +7,30 @@
 
 .card-container {
     scrollbar-width:20px;
+    
+
     scrollbar-color: black  rgba( 255, 255, 255, 0.25 ); 
 }
-.card-container::-webkit-scrollbar-thumb{
+.card-container ::-webkit-scrollbar-thumb{
     background-color: blue; 
+    /* border: 2px red solid; */
+
     border-radius: 10px;
+    
 }
 .card-container::-webkit-scrollbar-thumb {
+    /* border: 2px red solid; */
+
     background: #888; 
     border-radius: 52px;
     /* border: 2px red solid; */
 }
 
-
+.apply-form-cross{
+    float: right;
+    margin-top: -10px;
+    cursor: pointer;
+}
 
 .card{
     /* margin-top: 100px; */

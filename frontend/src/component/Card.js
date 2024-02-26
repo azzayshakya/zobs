@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
-import { Link, Navigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { FiCalendar, FiClock, FiDollarSign, FiMapPin } from 'react-icons/fi';
 import '../Css/Card.css'; 
-// import { Navigate } from 'react-router-dom';
+import { ImCross } from "react-icons/im";
+
+
 
 
 const Card = ({ data }) => {   
+    const Navigate = useNavigate(); 
 
     // console.log("alljobs:   ",data)
 
@@ -58,7 +61,7 @@ const Card = ({ data }) => {
                 setShowPopup(false)
                 setApplyButton(true)
                 Navigate("/")
-                alert("providing wrong informaintion")
+                setPopup(false)
 
             }
             if(!json.success){
@@ -152,6 +155,7 @@ const Card = ({ data }) => {
                     (
                         <div className='applyForm'>
                             <div className='applyforminner'>
+                                <div className='apply-form-cross' onClick={togglePopup}><ImCross/></div>
 
                                 <div className="row">
                                     <div className='leftelementincardform'>

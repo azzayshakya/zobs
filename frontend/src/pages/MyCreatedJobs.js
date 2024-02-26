@@ -75,7 +75,9 @@ const MyCreatedJobs = () => {
                                 ))}
                             </div>
                         ) : (
-                            <h2>No jobs found</h2>
+                            <div className="DataLoading">
+                                <h2 style={{padding:"50px 0px"}}>You have not created any Jobs</h2>
+                                </div>
                         )}
                     </div>
                 )}

@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
 import Navbar from '../component/Navbar'
 import {} from '../Css/PostJob.css'
-import { Navigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 const PostJob = () => {
+    const Navigate =useNavigate();
+
+    const [showPopup, setShowPopup] = useState(false);
+    const [Button,setButton]=useState(true);
     const [credentials,setcredentials]= useState({ email: localStorage.getItem("userEmail"),companyName:"",jobTitle:"",minPrice:"",maxPrice:"",salaryType:"",jobLocation:"",postingDate:"",experienceLevel:"",employmentType:"",companyLogo:"",description:""})
     const HandleSubmit=async(event)=>{
+        setButton(false)
+        setShowPopup(true)
         
         event.preventDefault();
         // console.log(JSON.stringify(credentials))       
@@ -20,9 +26,13 @@ const PostJob = () => {
         const json= await response.json();
         console.log(json)
         if (!json.success) {
+            setShowPopup(false)
+            setButton(true)
             alert("enter valid details")
         }
         if (json.success) {
+            setShowPopup(false)
+            setButton(true)
             alert("Job posted successfully")
             Navigate("/")
         }
@@ -162,9 +172,20 @@ const PostJob = () => {
                 <textarea name="description" id="" cols="70" rows="8" placeholder='Description' value={credentials.description} onChange={handleNameChange} ></textarea>
             </div>
 
-            <div className="SubmitButton" onClick={HandleSubmit}>
-            <button>Submit</button>
-        </div>
+
+            {showPopup &&
+                    <div className="SingingUpLoading">
+                    <h2 style={{marginLeft:"37%"}}>Please Wait !</h2>
+                    <div className="SignUpLoader"></div>
+                </div>
+                }
+                {Button &&
+                    <div className="SubmitButton" onClick={HandleSubmit}>
+                    <button>Submit</button>
+                </div>
+                }
+
+            
             
         </div>
 
