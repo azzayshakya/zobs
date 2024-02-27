@@ -8,6 +8,7 @@ const JobApplicants = () => {
     const [error, setError] = useState(null);
 
     const fetchData = async () => {
+
         try {
             setLoading(true);
             const fetchedData = await fetch("https://zobs-major-project.onrender.com/applicants", {
@@ -18,7 +19,8 @@ const JobApplicants = () => {
                 body: JSON.stringify({ email: localStorage.getItem("userEmail") })
             });
             const response = await fetchedData.json();
-            setJobsData(response.data);
+            const responsedata= await response.data.reverse();
+            setJobsData(responsedata);
             
         } catch (error) {
             console.error("Error fetching data:", error);
@@ -56,19 +58,19 @@ const JobApplicants = () => {
                                     {jobsData.map((job) => (
                                         <div className="mainc" key={job._id}>
                                             <div className="maintop">
-                                                <h3>Job Title: {job.jobtitle}</h3>
-                                                <p>Job ID: {job.jobid}</p>
-                                                <p>Your Email: {job.jobemail}</p>
+                                                <h3>Job Title: <span style={{}}>{job.jobtitle}</span></h3>
+                                                <p>Job ID:<span> {job.jobid}</span></p>
+                                                <p>Your Email:<span> {job.jobemail}</span></p>
                                                 <h4>Applicants:</h4>
                                             </div>
                                             <ul>
                                                 {job.applicant.map((applicant, index) => (
                                                     <li key={index}>
                                                         <div className="mainbottom">
-                                                            <p>Name: {applicant.name}</p>
-                                                            <p>Email: {applicant.email}</p>
-                                                            <p>Number: {applicant.number}</p>
-                                                            <p>Skills: {applicant.skills}</p>
+                                                            <p>Name: <span>{applicant.name}</span></p>
+                                                            <p>Email: <span>{applicant.email}</span></p>
+                                                            <p>Number: <span>{applicant.number}</span></p>
+                                                            <p>Skills: <span>{applicant.skills}</span></p>
                                                             <p>Resume: <button className="resumebutton" onClick={() => handleOpenFile(applicant.file)}>Open</button></p>
                                                         </div>
                                                     </li>

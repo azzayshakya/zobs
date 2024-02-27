@@ -32,6 +32,14 @@
 
 
 }
+.mainbottom p{
+    font-weight: 600;
+ 
+}
+.mainbottom span{
+    color: rgb(212, 209, 209);
+    font-weight: 400;
+}
 .resumebutton{
     border: none;
     border-radius: 52px;

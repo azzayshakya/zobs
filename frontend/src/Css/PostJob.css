@@ -8,6 +8,16 @@
     width: 100%;
     overflow-y: auto;
 }
+
+.UpdateJobPage{
+    background:url("../images/zobsbackground.jpg");
+    /* background-image: url('https://img.freepik.com/free-vector/paper-style-dynamic-lines-background_23-2149008629.jpg?w=1060&t=st=1708774036~exp=1708774636~hmac=11f79a34ee7f59628697764c61de075e2d2399d2f22a3a2e1775f75a533fb93d'); */
+    background-size: cover; 
+    background-position: center; 
+    height: 710px; 
+    width: 100%;
+    overflow-y: auto;
+}
 .upperPostJob{
     margin-top: 50px;
     /* background-color: rgb(247, 246, 246); */

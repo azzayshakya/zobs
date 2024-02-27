@@ -1,9 +1,10 @@
-    import React,{useEffect, useState} from "react";
-    import {} from "../Css/UpdatePage.css"
-    import { Link } from "react-router-dom";
+    import React,{ useState} from "react";
+
+import {} from '../Css/PostJob.css'
+
     import { useNavigate } from "react-router-dom";
 
-    import { UseSelector, useSelector } from "react-redux";
+    import { useSelector } from "react-redux";
 import Navbar from "../component/Navbar";
 
 
@@ -61,7 +62,7 @@ import Navbar from "../component/Navbar";
                     body: JSON.stringify({updatedJob,email:localStorage.getItem('userEmail')})
                 });
                 const data = await response.json();
-                console.log("updated job ", data);
+                // console.log("updated job ", data);
                 if(data.success){
                     setShowPopup(false)
                     setSubmitButton(true)
@@ -78,7 +79,7 @@ import Navbar from "../component/Navbar";
         
     
         return (<>
-        <div className="UpdateJobPage">
+        <div className="UpdateJobPage" >
 
         <div>
             <Navbar/>
