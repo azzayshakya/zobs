@@ -11,7 +11,7 @@
     /* border: 2px red solid; */
 }
 .mainContainerHome{
-    border: 2px green solid;
+    /* border: 2px green solid; */
     width: 100%;
     margin-top: 190px;
     margin-bottom: 50px;
@@ -73,10 +73,15 @@
     }
 
 }
-@media(max-width:420px){
-    .homeMain{
-      
-    }
+@media(max-width:468px){
+    .midContainer{
+        /* border: 2px yellow solid;     */
+     
+         margin-left:40px;
+     
+         /* margin-top: 10px; */
+     
+     }
    
 
 }

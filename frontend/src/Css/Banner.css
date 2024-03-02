@@ -183,7 +183,7 @@ margin-left: 50px;
 
 @media(max-width:420px){   
     .banner{
-        border: 2px blue solid;
+        /* border: 2px blue solid; */
     }  
     .BannerAbout{
         /* border: 2px red solid; */
@@ -195,7 +195,7 @@ margin-left: 50px;
     } 
         
     .inputFeild{
-       border: 3px red solid;
+       /* border: 3px red solid; */
        margin-top: 150px;
        margin-left: -20px;
        /* left: 5%; */
