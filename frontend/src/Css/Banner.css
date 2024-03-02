@@ -197,33 +197,34 @@ margin-left: 50px;
     .inputFeild{
        /* border: 3px red solid; */
        margin-top: 150px;
+       margin-left: -20px;
        /* left: 5%; */
 
-    }   
+    } 
     
-.inputFeild{
-
-    /* border: 3px red solid; */
-    /* margin-left: 5%; */
-    /* margin-right: 10%; */
-} 
-.inputFeild input{
-    width: auto;
- 
-    
-    /* border: 3px red solid; */
-
-
-}
+    .firstInputField{
+/* width: auto; */
+    }
+    .inputFeild input{
+    /* width: auto;     */
+    }
 
 
 
 .searchInBanner button{
-    /* border: 2px red solid; */
-
-}
-.icons{
+   
 
 }
 
+
+}
+
+@media(max-width:366px){  
+    .inputFeild{
+        /* border: 3px red solid; */
+        margin-top: 170px;
+        margin-left: -40px;
+        /* left: 5%; */
+ 
+     } 
 }
