@@ -131,12 +131,13 @@ top: 20px;
     }
 
     .Header{
+      border: 2px red solid;
+
         
     }
 
 
     .headerMobile{
-       
         position: relative;
         top: 30px;
         left: 0px;

@@ -121,15 +121,15 @@ const Card = ({ data }) => {
 
                     <div className="rightPartOfCard">
                         <div className='CardTitleAndName'>
-                            <h4 className='companuName'>{companyName}</h4>
+                            <h4 className='companuName' style={{color:"red"}}>{companyName}</h4>
                             <h3>{jobTitle}</h3>
                         </div>
 
                         <div className='MidRowOfTheCard'>
-                            <span className="spanofcard"><FiMapPin />{jobLocation}</span>
-                            <span className="spanofcard"><FiClock />{employmentType}</span>
-                            <span className="spanofcard"><FiDollarSign />{minPrice}-{maxPrice}</span>
-                            <span className="spanofcard"><FiCalendar />{postingDate}</span>
+                            <span className="spanofcard"><span><FiMapPin/></span>{jobLocation}</span>
+                            <span className="spanofcard"><span><FiClock /></span>{employmentType}</span>
+                            <span className="spanofcard"><span><FiDollarSign /></span>{minPrice}-{maxPrice}</span>
+                            <span className="spanofcard"><span><FiCalendar /></span>{postingDate}</span>
                         </div>
                         <p>
                             {description}
