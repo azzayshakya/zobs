@@ -111,7 +111,10 @@ top: 20px;
 .LinkTAGHome{
     color: #3575E2;
 }
-
+.toggleButton button{
+    /* border: 2px red solid; */
+    background: transparent;
+}
 
 
 

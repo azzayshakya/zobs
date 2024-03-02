@@ -1,32 +1,28 @@
 .banner{
 
 
-
-    border-radius: 52px;
-
+border-radius: 52px;
 background: rgba( 255, 255, 255, 0.25 );
 backdrop-filter:blur(10px) ;
 padding-top: 11px;
 padding-left: 50px;
-padding-right: 50px;
+padding-right: 10px;
+padding-bottom: 10px;
 width: 45%;
-height: 300px;
+height: auto;
 margin-top: 150px;
 margin-left: 50px;
 
 
 }
-.BannerAbout{
-    
-    /* border: 2px red solid; */
-}
 
-.BannerAbout .Find-your-job{
+
+.Find-your-job{
     font-size: 40px;
     margin-top: 50px;
    font-weight: 500;
 }
-.BannerAbout .Banner-Tag-line{
+.Banner-Tag-line{
     font-size: 20px;
     font-weight: 400;
 } 
@@ -36,9 +32,9 @@ margin-left: 50px;
     border-radius: 52px;
     background: rgba( 255, 255, 255, 0.25 );
     backdrop-filter:blur(10px) ;
-    position: absolute;
-    top: 320px;
-    left: 58%;
+    position: relative; 
+    top: 150px;
+    left: 58%; 
     /* border: 3px red solid; */
 } 
 .inputFeild input{
@@ -185,13 +181,49 @@ margin-left: 50px;
 
  }
 
-@media(max-width:420px){      
+@media(max-width:420px){   
+    .banner{
+        /* border: 2px blue solid; */
+    }  
+    .BannerAbout{
+        /* border: 2px red solid; */
+
+    }
+
+    .zobstagline{
+
+    } 
         
     .inputFeild{
        /* border: 3px red solid; */
        margin-top: 150px;
-       left: 5%;
+       /* left: 5%; */
 
     }   
+    
+.inputFeild{
+
+    /* border: 3px red solid; */
+    /* margin-left: 5%; */
+    /* margin-right: 10%; */
+} 
+.inputFeild input{
+    width: auto;
+ 
+    
+    /* border: 3px red solid; */
+
+
+}
+
+
+
+.searchInBanner button{
+    /* border: 2px red solid; */
+
+}
+.icons{
+
+}
 
 }

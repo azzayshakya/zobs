@@ -139,12 +139,8 @@ const Card = ({ data }) => {
                         <Link to={"/"}>
                         <button onClick={togglePopup}>Apply</button>
                         </Link>
-                       
-                    </div>
-
-                    
+                    </div>             
                 </Link>
-                
             </div>
          
             
