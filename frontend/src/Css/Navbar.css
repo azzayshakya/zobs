@@ -11,7 +11,7 @@ color: #3575E2;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    border-radius: 52px;
+    border-radius: 52px 52px 52px 52px;
 background: rgba( 255, 255, 255, 0.25 );
 backdrop-filter:blur(10px) ;
 /* border: 2px red solid; */
@@ -138,10 +138,14 @@ top: 20px;
 
 
     .headerMobile{
+        /* border: 2px red solid; */
+        background: rgba( 255, 255, 255, 0.25 );
+backdrop-filter:blur(10px) ;
+border-radius: 26px 0px 52px 0px;
         position: relative;
         top: 30px;
         left: 0px;
-        margin-top: -32px;
+        margin-top: -10px;
         width: 250px;
         display: block;
         display: flex;
@@ -191,6 +195,18 @@ top: 20px;
     }
     .buttonsideMobile button{
         /* text-decoration: none; */
+    }
+    .ajay{
+         background-color: #3575E2;
+        border: none;
+        color: white;
+        cursor: pointer;
+        border-radius: 8px;
+        padding: 7px 45px;
+        font-size: 15px;
+        text-decoration: none;
+        margin-top: 10px;
+
     }
 
     .loginButtonMobile button{

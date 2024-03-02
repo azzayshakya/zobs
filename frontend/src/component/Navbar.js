@@ -114,15 +114,23 @@ const Navbar=()=>{
         {IsOpen && (
           <div className="headerMobile">
             <div className="navbarMidMobile a">
-              <ul>
-              <li className="navbarNames active"><Link className='LinkTAG LinkTAGHome active' to={"/"}>Home</Link></li>
+            <ul>
+            {(localStorage.getItem("authToken")) ?
+            <span>
+                <li className="navbarNames active"><Link className='LinkTAG LinkTAGHome active' to={"/"}>Home</Link></li>
                 <li className="navbarNames"><Link className='LinkTAG' to={"/MyCreatedJobs"}>My Jobs</Link></li>
                 <li className="navbarNames"><Link className='LinkTAG' to={"/JobApplicants"}>Job Applicants</Link></li>
-                <li className="navbarNames"><Link className='LinkTAG' to={"/PostAJob"}>Post A Job</Link></li>dddddd 
-              </ul>
-            </div>
+                <li className="navbarNames"><Link className='LinkTAG' to={"/PostAJob"}>Post A Job</Link></li>
+                <li className="navbarNames"><Link className='LinkTAG' to={"/PostAJob"}>Log Out</Link></li>
+                <li onClick={handleLogout} className='ajay'><Link className='LinkTag' to="/LogIn">Log Out</Link></li>
 
-            <div className="buttonsideMobile a">
+               
+
+            </span>
+            :
+            <span>
+                <li className="navbarNames active"><Link className='LinkTAG LinkTAGHome active' to={"/"}>Home</Link></li>
+                <div className="buttonsideMobile a">
               <div className="loginButtonMobile">
               <button><Link className='LinkTag active' to="/LogIn">Log in</Link></button>
 
@@ -131,6 +139,16 @@ const Navbar=()=>{
               <button><Link to="/SignUp" className='LinkTag'>Sign Up</Link></button>
               </div>
             </div>
+
+
+            </span>
+        }
+              
+            
+              </ul>
+            </div>
+
+           
           </div>
         )}
     </>)
