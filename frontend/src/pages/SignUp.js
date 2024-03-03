@@ -55,7 +55,7 @@ const SignUp=()=>{
         </div>
         <div className="upperFormContainer">
 
-            <div className="leftSide">
+            <div className="leftSide mobileSignUpLeftSide">
                 <div className="leftsideIcon">
                     <GiCrossFlare/>
                 </div>

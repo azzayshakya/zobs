@@ -42,7 +42,7 @@ const SingleCreatedJob = ({ job }) => {
             <div className="rightPartOfCard">
 
               <div className='CardTitleAndName'>
-                <h4 className='companuName'>{companyName}</h4>
+                <h4 className='companuName' style={{color:"red"}}>{companyName}</h4>
                 <h3>{jobTitle}</h3>
               </div>
 

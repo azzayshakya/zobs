@@ -21,12 +21,10 @@
 .upperPostJob{
     margin-top: 50px;
     /* background-color: rgb(247, 246, 246); */
-    /* border: 2px red solid; */
     padding: 25px 0px;
 }
 .PostJobMain{
-    /* border: 2px red solid; */
-    height: 900px;
+    min-height: 900px;
     margin-left: 100px;
     margin-right: 100px;
     margin-top: 50px;
@@ -67,16 +65,19 @@
 
 .descriptionPostJov{
     padding-left: 20px;
+    
 
     
    
     
 }
 .descriptionPostJov textarea{
+
     background: rgb(212, 210, 210);
     
     font-weight: 500;
-   font-weight:bold;
+   
+   width: auto;
    
 }
 
@@ -138,4 +139,39 @@
     cursor: pointer;
     
     
+}
+
+@media(max-width:768px){
+    .PostJobMain{
+        margin: 0px 40px;
+    }
+    .PostRow{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .PostRowRadioUpper{
+        /* border: 2px red solid; */
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+    .PostJobMain{
+        height:1250px;
+    }
+    .descriptionPostJov {
+    
+    }
+    .descriptionPostJov textarea{
+        width:80%;
+    }
+    .SubmitButton{
+        left:30%;
+    }
+
+
 }

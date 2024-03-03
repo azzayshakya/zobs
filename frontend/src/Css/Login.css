@@ -26,7 +26,7 @@
     margin-top: 50px;
     /* background-color: rgb(247, 246, 246); */
     padding: 25px 0px;
-    height:600px;
+    /* height:600px; */
     /* border: 2px red solid; */
     display: flex;
     
@@ -35,8 +35,8 @@
 .leftSide{
     
     /* border: 2px red solid; */
-    /* width:50%; */
-    width: 500px;
+    width:50%;
+    max-width: 500px;
     margin-left: 100px;
     
     border-radius: 52px;
@@ -71,7 +71,6 @@
 }
 
 .FormMainContainer{
-    /* border: 2px red solid; */
     width: 300px;
     height: 300px;
     position: relative;
@@ -84,6 +83,8 @@
     border-radius: 52px;
     background: rgba( 255, 255, 255, 0.25 );
     backdrop-filter:blur(10px) ;
+    /* border: 2px red solid; */
+
     
 }
 
@@ -132,4 +133,78 @@
     background-color: #3575E2;
     color: white;
     border: none;
+}
+
+@media(max-width:950px){
+    .upperFormContainer{
+        height:600px;
+        /* border: 2px red solid; */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 0px;
+        
+        
+    
+    }
+    .leftSide{
+        height: 260px;
+        margin-left: 0px;
+    }
+    .leftSide .leftsideIcon{
+        /* border: 2px red solid; */
+        height: 50px;
+        font-size: 100px;
+        padding-left: 32%;
+        margin-top: 0px;
+    }
+    .leftSide .leftSideLogo{
+        /* border: 2px red solid; */
+        text-align: center;
+        font-size: 40px;
+        font-weight: 1000;
+        position: relative;
+        top:20px;
+        left:0px; 
+    }
+    .leftSide .leftsideTag{
+        /* border: 2px red solid; */
+        text-align: center;
+        font-size: 30px;
+        margin-top: -25px;
+    }
+    
+.rightside{
+    /* border: 2px red solid; */
+    width:50%;
+}
+
+.FormMainContainer{
+    margin-left: -50px;
+    z-index: 200;
+    width: 300px;
+    height: 270px;
+    position: relative;
+    left: 20%;
+    top: 10px;
+    padding: 20px 20px;
+    border: 1px solid;
+    border-radius:10px;
+    /* background-color: white; */
+    border-radius: 52px;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter:blur(10px) ;
+    /* border: 2px red solid; */
+
+    
+}
+.mobileSignUpLeftSide{
+    display: none;
+}
+}
+
+@media(max-width:450px){
+    .FormMainContainer{
+        margin-left: -90px;
+    }
 }
