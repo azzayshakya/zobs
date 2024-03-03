@@ -64,7 +64,7 @@ const MyCreatedJobs = () => {
                 ) : (
                     <div>
                         {data && data.length > 0 ? (
-                            <div>
+                            <div className="beforesinglecreditedjon">
                                 {data.map((job, index) => (
                                     <div key={job._id}>
                                        

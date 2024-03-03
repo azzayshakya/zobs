@@ -9,12 +9,16 @@
     width: 100%;
     overflow-y: auto;
 }
+.beforesinglecreditedjon{
+
+
+}
 .SingleCreatedJob{
-    /* border: 2px red solid; */
-    width: 700px;
+    max-width: 700px;
     margin-top: 100px;
     margin-left: 270px;
 }
+
 .Updatebutton  button{
     border: none;
     border-radius: 52px;
@@ -22,11 +26,70 @@ background: rgba( 255, 255, 255, 0.25 );
 backdrop-filter:blur(10px) ;
 height: 50px;
 width: 100px;
-float: right;
+position: relative;
+top: 0px;
+left: 80%;
 margin-top:20px ;
 cursor: pointer;
+}
 
+@media(max-width:1045px){
+    .SingleCreatedJob{
+        margin-left: 200px;
+    }
 
+}
+@media(max-width:900px){
+    .SingleCreatedJob{
+        margin-left: 100px;
+    }
+    .singlecreditjobcard{
+        /* max-width:350px; */
+        /* width: auto; */
+    }
 
+}
+@media(max-width:810px){
+    .SingleCreatedJob{
+        margin-left: 50px;
+    }
+    .singlecreditjobcard{
+        /* width: auto; */
+    }
+    
+
+}
+
+@media(max-width:768px){
+    .SingleCreatedJob{
+        margin-left: 100px;
+    }
+    .singlecreditjobcard{
+        max-width:350px;
+
+        /* width: auto; */
+    }
+    .Updatebutton  button{
+        /* position: relative;
+        top: 0px; */
+        left:30%;
+       
+        }
+
+}
+
+@media(max-width:566px){
+    .SingleCreatedJob{
+        margin-left: 50px;
+    }
+  
+}
+@media(max-width:468px){
+    .SingleCreatedJob{
+       
+
+        margin-left: 20px;
+    }
+  
 }
 

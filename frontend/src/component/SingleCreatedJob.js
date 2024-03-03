@@ -31,7 +31,7 @@ const SingleCreatedJob = ({ job }) => {
     <div className="SingleCreatedJob">
 
       
-        <div className="card">
+        <div className="card singlecreditjobcard">
 
           <Link className='ppp' to={"/"}>
 

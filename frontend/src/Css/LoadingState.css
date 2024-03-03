@@ -1,6 +1,10 @@
 .DataLoading{
-    height: 200px;
-border: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 200px;
+  border: none;
+
 border-radius: 52px;
 background: rgba( 255, 255, 255, 0.25 );
 backdrop-filter:blur(10px) ;
@@ -8,25 +12,26 @@ margin-top: 50px;
 }
 
 .DataLoading h2{
-    position: relative;
-    top: 20px;
-    left: 470px;
-    
+  /* position: relative;
+  top: 20px;
+  left: 470px; */
+  
 
 }
 .loader {
-    position: relative;
-    top: 20px;
-    left: 520px;
+  /* position: relative;
+  top: 20px;
+  left: 520px; */
 
-    border: 16px solid #f3f3f3;
-    border-radius: 50%;
-    border-top: 16px solid  black;
-    width: 120px;
-    height: 120px;
-    -webkit-animation: spin 2s linear infinite; /* Safari */
-    animation: spin 2s linear infinite;
-  }
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid  black;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
+}
+
   
   /* Safari */
   @-webkit-keyframes spin {
