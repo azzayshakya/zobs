@@ -207,4 +207,9 @@
     .FormMainContainer{
         margin-left: -90px;
     }
+    .leftSide{
+        height: 260px;
+        margin: 0px 10px;
+        width: auto;
+    }
 }
