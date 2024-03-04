@@ -36,9 +36,22 @@ const JobApplicants = () => {
 
     const handleOpenFile = (fileUrl) => {
         // Open the file in a new tab/window
-        const fileName = fileUrl.split('/').pop(); // Extract filename from URL
-        const pdfFileName = fileName.endsWith('.pdf') ? fileName : fileName + '.pdf'; // Ensure filename has .pdf extension
-        window.open(fileUrl, '_blank');
+        fetch(fileUrl)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const fileName = fileUrl.split('/').pop(); // Extract filename from URL
+                const pdfFileName = fileName.endsWith('.pdf') ? fileName : fileName + '.pdf'; // Ensure filename has .pdf extension
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = pdfFileName; // Specify the filename with ".pdf" extension
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+            })
+            .catch(error => {
+                console.error('Error downloading file:', error);
+            });
     };
 
     return (
