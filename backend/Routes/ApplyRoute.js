@@ -1,15 +1,11 @@
 const express = require('express');
 const router = express.Router();
 const applicant = require("../model/ApplyModel");
-
 router.post("/applyforjob", async (req, res) => {
     try {
-        
-        // console.log("Received data: ", req.body);
-        const { secure_url } = req.body;
-        const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = req.body.data;
-    
-        
+        const { secure_url, data, fileName } = req.body; // Extract fileName from request body
+
+        const { jobid, jobtitle, jobemail, name, email, number, skills, experienceLevel, experienceinyears } = data;
 
         let jobdata = await applicant.findOne({ jobid });
 

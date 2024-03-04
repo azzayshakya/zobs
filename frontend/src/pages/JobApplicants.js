@@ -36,6 +36,8 @@ const JobApplicants = () => {
 
     const handleOpenFile = (fileUrl) => {
         // Open the file in a new tab/window
+        const fileName = fileUrl.split('/').pop(); // Extract filename from URL
+        const pdfFileName = fileName.endsWith('.pdf') ? fileName : fileName + '.pdf'; // Ensure filename has .pdf extension
         window.open(fileUrl, '_blank');
     };
 
