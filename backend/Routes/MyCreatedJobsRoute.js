@@ -5,7 +5,7 @@ const allJobs = require("../model/PostJob");
 router.post("/MyCreatedJobs", async (req, res) => {
     try {
         const email = req.body.email;
-    
+        
         const postedJobs = await allJobs.find({ email }).sort({ _id: -1 });
 
         if (postedJobs.length > 0) {

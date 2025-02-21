@@ -51,7 +51,7 @@ const Card = ({ data }) => {
             const apply = await fetch("https://zobs-major-project.onrender.com/createPost", {
                 method: "POST",
                 // headers: {
-                //     'Content-Type': 'multipart/form-data', // Set the content type to handle file uploads
+                //     'Content-Type': 'multipart/form-data', 
                 //   },
                 body: formData
             });

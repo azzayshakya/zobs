@@ -22,7 +22,7 @@ const Banner = ({query,handleSearch}) => {
             <div className='icons'>
                 < CiLocationOn/>
             </div>
-               
+            
             <input type="text" placeholder='Search Type Of Job' value={query} onChange={handleSearch} />
 
             </div>
